@@ -22,7 +22,7 @@ public class ProdutoDAO {
 	}
 
 	public List<Produto> listar() {
-		return manager.createQuery("SELECT P FROM PRODUTO P", Produto.class).getResultList();
+		return manager.createQuery("select p from Produto p", Produto.class).getResultList();
 	}
 	
 }
