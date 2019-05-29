@@ -40,9 +40,9 @@
 
 		<c:forEach items="${tipos}" var="tipoPreco" varStatus="status">
 			<div>
-				<label>${tipoPreco }</label>
-				<form:input path="precos[${status.index}].valor" />
-				<form:hidden path="precos[${status.index}].tipo"
+				<label>Preço</label>
+				<form:input path="preco[${status.index}].valor"/>
+				<form:hidden path="preco[${status.index}].tipo"
 					value="${tipoPreco}" />
 			</div>
 		</c:forEach>
