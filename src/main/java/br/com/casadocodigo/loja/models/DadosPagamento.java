@@ -11,7 +11,6 @@ public class DadosPagamento {
 	}
 	
 	public DadosPagamento() {
-		
 	}
 
 	public BigDecimal getValue() {
