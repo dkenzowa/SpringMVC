@@ -11,16 +11,11 @@
 <title>Livros de Java, Android, iPhone, Ruby, PHP e muito mais -
 	Casa do Código</title>
 
-<c:url value="/resources/css" var="cssPath" />
+<c:url value="/resources" var="cssPath" />
 <link rel="stylesheet" href="${cssPath}/css/bootstrap.min.css" />
 <link rel="stylesheet" href="${cssPath}/css/bootstrap-theme.min.css" />
 
 <style type="text/css">
-
-	body{
-		padding: 60px 0px;
-	}
-
 </style>
 
 </head>
@@ -41,9 +36,9 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="${s:mvcUrl('PC#listar').build() }">Lista de
+					<li><a href="${s:mvcUrl('PC#listar').build()}">Lista de
 							Produtos</a></li>
-					<li><a href="${s:mvcUrl('PC#form').build()} }">Cadastro de
+					<li><a href="${s:mvcUrl('PC#form').build()}">Cadastro de
 							Produtos</a></li>
 				</ul>
 			</div>
@@ -82,7 +77,7 @@
 
 			<c:forEach items="${tipos}" var="tipoPreco" varStatus="status">
 				<div class="form-group">
-					<label>Preço</label>
+					<label>${tipoPreco}</label>
 					<form:input path="preco[${status.index}].valor" cssClass="form-control"/>
 					<form:hidden path="preco[${status.index}].tipo"
 						value="${tipoPreco}" />
